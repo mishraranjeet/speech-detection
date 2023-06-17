@@ -21,3 +21,4 @@ services:
       - ./speech_service:/code
     environment:
       FLASK_ENV: development
+
