@@ -11,5 +11,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
+EXPOSE 4000
 
 CMD ["python3", "app.py"]

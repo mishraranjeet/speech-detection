@@ -1,11 +1,11 @@
-version: '3'
+version: "3.3"
 services:
   chunk_service:
     build:
       context: ./chunk_service
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "4000:4000"
     volumes:
       - ./chunk_service:/code
     environment:
@@ -16,7 +16,7 @@ services:
       context: ./speech_process
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "9000:9000"
     volumes:
       - ./speech_service:/code
     environment:
