@@ -1,0 +1,23 @@
+version: '3'
+services:
+  chunk_service:
+    build:
+      context: ./chunk_service
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./chunk_service:/code
+    environment:
+      FLASK_ENV: development
+
+  speech_service:
+    build:
+      context: ./speech_process
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./speech_service:/code
+    environment:
+      FLASK_ENV: development
