@@ -25,7 +25,7 @@ class ChunkService(object):
         chunks = split_on_silence(
             audio,
             min_silence_len=CHUNK_SIZE_MS,  # Minimum silence length to split on (in milliseconds)
-            silence_thresh=-40  # Adjust this threshold according to your audio
+            silence_thresh=-45 # Adjust this threshold according to your audio
         )
 
         return chunks
